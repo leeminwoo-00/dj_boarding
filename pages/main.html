@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Daejeon" />
+    <meta name="author" content="Daejeon" />
+    <meta name="description" content="Daejeon" />
+    <title>대전광역시 교통약자 탑승요청 서비스</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+</head>
+
+<body>
+    <div id="menu_skip">
+        <a href="#rightMenu" tabindex="1"><span>오른쪽 메뉴로 바로가기</span></a>
+        <a href="#search" tabindex="2"><span>검색하기로 바로가기</span></a>
+        <a href="#content" tabindex="3"><span>본문으로 바로가기</span></a>
+    </div>
+    <div class="row_box">
+        <header class="dflx_ac gap_10" id="header">
+            <a href="main.html" class="w100">
+                <img src="../assets/images/daejeon_logo_36.svg" alt="대전광역시 daejeon metropolitan city" />
+            </a>
+            <h1 class="heading_one">교통약자 저상버스 예약</h1>
+            <button id="rightMenu" type="button" class="m-l-a" aria-haspopup="true" aria-controls="rightSideMenu" title="상단메뉴 열기">
+                <img src="../assets/images/setting_fill_bk_24.svg" alt="" />
+            </button>
+        </header>
+        <article class="directions_search" id="search">
+            <h2 class="directions_search_title fc_white">
+                <span class="fs_bold">저상버스</span> <span class="fs_light">타고</span><br/>
+                <span class="fs_bold">어디</span><span class="fs_light">로 갈까요</span><span class="fs_bold">?</span>
+            </h2>
+            <div class="search_area m-t-24">
+                <div class="search_item">
+                    <div>
+                        <label for="startingPoint" class="destination_label">출발지</label>
+                    </div>
+                    <div class="dflx_ac">
+                        <div class="relative w-85">
+                            <input type="search" role="combobox" id="startingPoint" aria-controls="startingPoint_id" class="destination_input"  aria-autocomplete="list" aria-activedescentant="" placeholder="출발지를 입력하세요" title="출발지 검색" />
+                            <!-- input에 텍스트 입력 시 노출 -->
+                            <button type="button" class="remove_input" title=">출발지 입력란 지우기">
+                                <img src="../assets/images/close_fill_fff_16.svg" alt="" />
+                            </button>
+                        </div>               
+                        <!-- 활성화 시에 op40 제거 -->
+                        <button type="button" class="search_replace m-l-a op40" title="출발지와 도착지 경로 검색">
+                            <img src="../assets/images/array_white_44.svg" alt="" />
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <ul role="listbox" id="startingPoint_id" aria-label="startingPoint" aria-labelledby="startingPoint_list" class="keyword_place_box popup_shadow">
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시장
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">재래시장</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시청
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">관공서</p>
+                                </a>
+                            </li>    
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>오월드
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>      
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시장
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">재래시장</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시청
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">관공서</p>
+                                </a>
+                            </li>    
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>오월드
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>      
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시장
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">재래시장</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시청
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">관공서</p>
+                                </a>
+                            </li>    
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>오월드
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>   
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시장
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">재래시장</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시청
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">관공서</p>
+                                </a>
+                            </li>    
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>오월드
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>   
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시장
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">재래시장</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>시청
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">관공서</p>
+                                </a>
+                            </li>    
+                            <li role="presentation">
+                                <a href="directions_search.html" role="option" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>오월드
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 사정공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
+                </div>
+                <div class="search_item relative m-t-20">
+                    <div>
+                        <label for="destination" class="destination_label">도착지</label>
+                    </div>
+                    <div class="dflx_ac">
+                        <div class="relative w-85">
+                            <input type="search" role="combobox" id="destination" aria-controls="destination_id" class="destination_input"  aria-autocomplete="list" aria-activedescentant="" placeholder="도착지를 입력하세요" />
+                            <!-- input에 텍스트 입력 시 노출 -->
+                            <button type="button" class="remove_input" title="도착지 입력란 지우기">
+                                <img src="../assets/images/close_fill_fff_16.svg" alt="" />
+                            </button>
+                        </div>
+                        <!-- 활성화 시에 op40 제거 -->
+                        <button type="button" class="m-l-a op40" title="출발지와 도착지 교체">
+                            <img src="../assets/images/search_fff_44.svg" alt="" />
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <ul role="listbox" id="destination_id" aria-label="destination" aria-labelledby="destination_list" class="keyword_place_box popup_shadow">
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">한밭수목원</p>
+                                        <p class="keyword_place_address">대전 서구 둔산대로 169</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">수목원, 식물원</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">
+                                            <span class="fc_primary">대전</span>오월드
+                                        </p>
+                                        <p class="keyword_place_address">대전 중구 시청공원로 70</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">계룡스파텔 대온천탕</p>
+                                        <p class="keyword_place_address">대전 유성구 온천로81</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">온천</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">장태산자연휴양림</p>
+                                        <p class="keyword_place_address">대전 서구 장안로 461</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">자연휴양림</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">수동골</p>
+                                        <p class="keyword_place_address">대전 유성구 계산동 산 40</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">계곡</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">으느정이 문화의 거리</p>
+                                        <p class="keyword_place_address">대전 중구 은행동 216</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마거리</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">오동선대청호벚꽃길</p>
+                                        <p class="keyword_place_address">대전 동구 산하동 산 14-15</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마거리</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">엑스포시민광장</p>
+                                        <p class="keyword_place_address">대전 서구 둔산대로 169</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">광장</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">계족산 황톳길</p>
+                                        <p class="keyword_place_address">대전 대덕구 장동 453-1</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">도보여행</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="option"  href="directions_search.html" class="keyword_place_list gap_12">
+                                    <img src="../assets/images/search_bk_16.svg" alt="" />
+                                    <div>
+                                        <p class="keyword_place_name">엑스포과학공원</p>
+                                        <p class="keyword_place_address">대전 유성구 대덕대로 480</p>
+                                    </div>
+                                    <p class="keyword_place_category m-l-a">테마파크</p>
+                                </a>
+                            </li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <main id="content">
+            <article class="message_sticky default">
+                <div class="message_box gap_8 h64">
+                    <img src="../assets/images/notice_fill_gray_16.svg" alt="" />
+                    <p class="fs_medium lh_20">만차 시 탑승하기 어려울 수 있음을<br/>
+                        양해하여 주시기 바랍니다.</p>
+                    <button type="button" class="m-l-a" title="안내 메시지 닫기">
+                        <img src="../assets/images/close_line_bk_20.svg" alt="" />
+                    </button>            
+                </div>
+            </article>
+            <div class="boarding_request">
+                <p class="fs_18_bold fc_primary m-b-10">탑승요청</p>
+                <strong class="fs_24_bold fc_secondary">내 저상버스 어디까지 왔을까?</strong>
+                <!-- 상세보기 -->
+                <div class="boarding_data gray m-t-20 p-20">
+                    <div class="dflx_ac_jcent gap_4">
+                        <img src="../assets/images/bus_fill_bk_16.svg" alt="" />
+                        <p class="fs_20_bold fc_black60">115</p>
+                    </div>
+                    <p class="fs_medium tac m-t-8">최근 탑승요청 내역을 확인하세요</p>
+                    <a href="directions_route.html" class="btn_roundary medium fc_black60 m-t-20">
+                        상세보기
+                    </a>
+                </div>
+                <!-- 요청없을 때 -->
+                <div class="boarding_data gray m-t-20">
+                    <p class="dflx_ac gap_6">
+                        <img src="../assets/images/info_fill_bk_16.svg" alt="">
+                        <span class="lh_transform">현재 탑승요청한 내역이 없습니다.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="black05_divider h16"></div>
+            <div class="tab_box">
+                <div class="tab_btn_list keyword_tab m-b-20" aria-label="목적지검색 탭">
+                    <button role="tab" aria-selected="true" aria-controls="recently_tabPanel" id="recently"  tabindex="0" class="tab_btn btn_roundary keyword_tab_btn" title="최근 검색어">
+                        최근 검색어
+                    </button>
+                    <button role="tab" aria-selected="false" aria-controls="bookmark_tabPanel" id="bookmark"  tabindex="-1" class="tab_btn btn_roundary keyword_tab_btn" title="즐겨찾기">
+                        즐겨찾기
+                    </button>
+                </div>
+                <div id="recently_tabPanel" class="tab_contents" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+                    <ul class="recent_keyword_box m-t-20">
+                        <li class="keword_list">
+                            <a href="./directions_search.html" class="dflx_ac gap_12">
+                                <img src="../assets/images/bus_fill_gray_16.svg" alt="" />
+                                <div class="">
+                                    <p class="fs_medium fc_black87">115</p>
+                                    <p class="dflx_ac gap_4 fs_14 fc_black50 m-t-5">
+                                        윗사정삼거리
+                                        <img src="../assets/images/array_both_16.svg" alt="" />
+                                        충대농대종점
+                                    </p>
+                                </div>
+                            </a>
+                            <button type="button" class="m-l-a btn_bookmark btn_toggle on" title="즐겨찾기 추가/삭제">
+                                <img class="img" src="../assets/images/bookmark_bk_off_16.svg" alt="" />
+                                <img class="img_on" src="../assets/images/bookmark_bk_on_16.svg" alt="" />
+                            </button>
+                        </li>
+                        <li class="keword_list">
+                            <a href="./directions_search.html" class="dflx_ac gap_12">
+                                <img src="../assets/images/location_point_fill_16.svg" alt="" />
+                                <div class="">
+                                    <p class="fs_medium fc_black87">대전오월드</p>
+                                    <p class="fs_14 fc_black50 m-t-5">
+                                        대전 중구 사정공원로 70
+                                    </p>
+                                </div>
+                            </a>
+                            <button type="button" class="m-l-a btn_bookmark btn_toggle" title="즐겨찾기 추가/삭제">
+                                <img class="img" src="../assets/images/bookmark_bk_off_16.svg" alt="" />
+                                <img class="img_on" src="../assets/images/bookmark_bk_on_16.svg" alt="" />
+                            </button>
+                        </li>
+                        <li class="keword_list">
+                            <a href="./directions_search.html" class="dflx_ac gap_12">
+                                <img src="../assets/images/gps_16.svg" alt="" />
+                                <div class="">
+                                    <p class="fs_medium fc_black87">대전오월드</p>
+                                    <p class="dflx_ac gap_4 fs_medium fc_black87 m-t-5">
+                                        <img src="../assets/images/array_bk_16.svg" alt="" />
+                                        유성온천역 대전1호선
+                                    </p>
+                                </div>
+                            </a>
+                            <button type="button" class="m-l-a btn_bookmark btn_toggle" title="즐겨찾기 추가/삭제">
+                                <img class="img" src="../assets/images/bookmark_bk_off_16.svg" alt="" />
+                                <img class="img_on" src="../assets/images/bookmark_bk_on_16.svg" alt="" />
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="p-20">
+                        <button type="button" class="btn_gray large w-100">
+                            검색 기록 삭제
+                        </button>
+                    </div>
+                    <!-- 내용 없을 때 -->
+                    <div class="no_data">
+                        <p class="nodata_text">이용 내역이 없습니다.</p>
+                    </div>                
+                </div>
+                <div id="bookmark_tabPanel" class="tab_contents" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+                    <ul class="recent_keyword_box m-t-20">
+                        <li class="keword_list">
+                            <a href="./directions_search.html" class="dflx_ac gap_12">
+                                <img src="../assets/images/bus_fill_gray_16.svg" alt="" />
+                                <div class="">
+                                    <p class="fs_medium fc_black87">115</p>
+                                    <p class="dflx_ac gap_4 fs_14 fc_black50 m-t-5">
+                                        윗사정삼거리
+                                        <img src="../assets/images/array_both_16.svg" alt="" />
+                                        충대농대종점
+                                    </p>
+                                </div>
+                            </a>
+                            <button type="button" class="m-l-a btn_bookmark btn_toggle on" title="즐겨찾기 추가/삭제">
+                                <img class="img" src="../assets/images/bookmark_bk_off_16.svg" alt="" />
+                                <img class="img_on" src="../assets/images/bookmark_bk_on_16.svg" alt="" />
+                            </button>
+                        </li>
+                        <li class="keword_list">
+                            <a href="./directions_search.html" class="dflx_ac gap_12">
+                                <img src="../assets/images/location_point_fill_16.svg" alt="" />
+                                <div class="">
+                                    <p class="fs_medium fc_black87">대전오월드</p>
+                                    <p class="fs_14 fc_black50 m-t-5">
+                                        대전 중구 사정공원로 70
+                                    </p>
+                                </div>
+                            </a>
+                            <button type="button" class="m-l-a btn_bookmark btn_toggle on" title="즐겨찾기 추가/삭제">
+                                <img class="img" src="../assets/images/bookmark_bk_off_16.svg" alt="" />
+                                <img class="img_on" src="../assets/images/bookmark_bk_on_16.svg" alt="" />
+                            </button>
+                        </li>
+                        <li class="keword_list">
+                            <a href="./directions_search.html" class="dflx_ac gap_12">
+                                <img src="../assets/images/gps_16.svg" alt="" />
+                                <div class="">
+                                    <p class="fs_medium fc_black87">대전오월드</p>
+                                    <p class="dflx_ac gap_4 fs_medium fc_black87 m-t-5">
+                                        <img src="../assets/images/array_bk_16.svg" alt="" />
+                                        유성온천역 대전1호선
+                                    </p>
+                                </div>
+                            </a>
+                            <button type="button" class="m-l-a btn_bookmark btn_toggle on" title="즐겨찾기 추가/삭제">
+                                <img class="img" src="../assets/images/bookmark_bk_off_16.svg" alt="" />
+                                <img class="img_on" src="../assets/images/bookmark_bk_on_16.svg" alt="" />
+                            </button>
+                        </li>
+                    </ul>              
+                </div>
+            </div>
+        </main>
+        <footer class="footer_copyright">
+            (35242) 대전광역시 서구 둔산로 100 (둔산동)<br/>
+            ⓒ DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+    <nav class="side_menu" aria-expanded="false">
+        <ul class="side_menu_list" id="rightSideMenu" role="menu" aria-labelledby="menubutton">
+            <li role="presentation">
+                <a class="side_menu_anchor" role="menuitem" href="./bookmark.html">
+                    즐겨찾기
+                    
+                </a>
+            </li>
+            <li role="presentation">
+                <a class="side_menu_anchor" role="menuitem" href="./boarding_request.html">
+                    탑승요청내역
+                    
+                </a>
+            </li>
+            <li role="presentation" class="top_white">
+                <a class="side_menu_anchor" role="menuitem" href="./terms.html">
+                    약관 및 정책
+                    
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/overlayscrollbars.browser.es6.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){           
+            // 오버레이 스크롤바
+            overlayAction() 
+            // 탭메뉴
+            tabsInit()
+        })
+    </script>
+</body>
+
+</html>

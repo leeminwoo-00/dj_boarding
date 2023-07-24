@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Daejeon" />
+    <meta name="author" content="Daejeon" />
+    <meta name="description" content="Daejeon" />
+    <title>대전광역시 교통약자 탑승요청 서비스</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+</head>
+
+<body>
+    <div id="menu_skip">
+        <a href="#rightMenu" tabindex="1"><span>오른쪽 메뉴로 바로가기</span></a>
+        <a href="#content" tabindex="2"><span>본문으로 바로가기</span></a>
+    </div>
+    <div class="row_box">
+        <header class="dflx_ac gap_10" id="header">
+            <a href="main.html" class="w100">
+                <img src="../assets/images/daejeon_logo_36.svg" alt="대전광역시 daejeon metropolitan city" />
+            </a>
+            <h1 class="heading_one">교통약자 저상버스 예약</h1>
+            <button id="rightMenu" type="button" class="m-l-a" aria-haspopup="true" aria-controls="rightSideMenu" title="상단메뉴 열기">
+                <img src="../assets/images/setting_fill_bk_24.svg" alt="" />
+            </button>
+        </header>
+        <main class="route_grid_box" id="content">
+            <div class="realtime_map gap_12">
+                <a href="directions_search.html" class="btn_history_back" title="뒤로 가기">
+                    <img src="../assets/images/back_btn_40.svg" alt="" />
+                </a>
+                <div class="dflx_ae_jcent h100">
+                    <button type="button" class="" title="출발">
+                        <img src="../assets/images/departature_32.svg" alt="" />
+                    </button>                  
+                    <button type="button" class="" title="도착">
+                        <img src="../assets/images/arrival_32.svg" alt="도착" />                 
+                    </button>
+                    <button type="button" class="" title="버스정류장">
+                        <p class="text_roundary">대전오월드</p>
+                        <img src="../assets/images/busstop_32.svg" alt="" />                    
+                    </button>
+                </div>
+                <button type="button" class="btn_fullscreen btn_float_func" title="지도 전체화면">
+                    <img src="../assets/images/zoom_out_bk_24.svg" alt="" />
+                </button>
+            </div>
+            <div class="">
+                <div class="route_full_info btm_black10">
+                    <strong class="fs_24_bold">38분</strong>
+                    <p class="fs_medium m-l-8">소요예정</p>
+                    <div class="dflx_ac fs_medium fc_black60 m-l-a">
+                        <span class="h18"><img src="../assets/images/wheelchair_bk_16.svg" alt="휠체어" /></span>
+                        <span>도보 6분</span>
+                        <span class="dashbar_divider bg_black60"></span>
+                        <span class="h18"><img src="../assets/images/bus_fill_bk_16.svg" alt="버스" /></span>
+                        <span>115</span>
+                    </div>
+                </div>
+                <div class="route_full_box overlayscroll" role="list">
+                    <div class="route_full_list" role="listitem">
+                        <div class="route_walking">
+                            <img src="../assets/images/departure_24.svg" alt="출발" />
+                        </div>
+                        <div class="route_full__text p-t-4">
+                            <strong class="fs_18_medium">카이스트</strong>
+                            <p class="route_full__text_detail fc_black60">도보 5분, 263m</p>
+                        </div>
+                    </div>
+                    <div class="route_full_list" role="listitem">
+                        <div class="route_bus route_primary">
+                            <div class="label_circle small label_primary">
+                                <img src="../assets/images/bus_fill_fff_16.svg" alt="버스" />
+                            </div>
+                        </div>
+                        <div class="route_full__text">
+                            <div class="dflx p-t-4">
+                                <p class="fs_18_bold fc_primary">115</p>
+                                <strong class="m-l-12 fs_18_medium">대전오월드</strong>
+                            </div>
+                            <p class="m-t-10 fs_18_medium fc_black60">22650</p>
+                            <div class="dflx_ac m-t-8">
+                                <p class="fs_medium fc_error">1분 후</p>
+                                <p class="m-l-12 fc_black60">2정거장 전</p>
+                                <button type="button" class="label_circle small label_black05 m-l-4" title="새로고침">
+                                    <img src="../assets/images/reset_bk_20.svg" alt="" />
+                                </button>
+                                <div class="m-r-16 m-l-a">
+                                    <p class="btn_roundary small">9776 저상</p>
+                                </div>
+                            </div>
+                            <div class="accordion_detail m-t-16 m-r-16">
+                                <button type="button" class="accordion_btn fc_black60" aria-expanded="false" aria-controls="accordionBus" title="버스이동 소요시간">59분, 10정거장 이동 <img src="../assets/images/arrow_down_bk_12.svg" alt="" class="accordion_arrrow" /></button>
+                                <div id="accordionBus" class="accordion_route accordion m-t-8" aria-labelledby="bus route detail">
+                                    <div class="autorow_36 ai_center">
+                                        <p>사정동</p>
+                                        <p>산성초등학교</p>
+                                        <p>산성네거리</p>
+                                        <p>산성동 주민센터</p>
+                                        <p>도마교</p>
+                                        <p>도마네거리</p>
+                                        <p>도마삼거리</p>
+                                        <p>서부소방서</p>
+                                        <p>정림동</p>
+                                        <p>가수원고</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-t-16 m-r-16">
+                                <a href="directions_businfo.html" class="btn_gray medium w-100 gap_6">
+                                    <img class="w24" src="../assets/images/info_fill_bk_24.svg" alt="" />
+                                    버스정보
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route_full_list" role="listitem">
+                        <div class="route_walking route_dot">
+                            <div class="label_circle bg_primary"></div>
+                        </div>
+                        <div class="route_full__text p-t-4">
+                            <div class="route_full__text_detail fs_18_medium">
+                                <strong class="fs_medium">대전시남부터미널후문</strong>
+                                <p class="fc_black60 m-t-4">41330</p>
+                            </div>
+                            <p class="route_full__text_detail fc_black60">도보 10분, 500m</p>
+                        </div>
+                    </div>
+                    <div class="route_full_list" role="listitem">
+                        <div class="">
+                            <img src="../assets/images/arrival_24.svg" alt="도착" />
+                        </div>
+                        <div class="route_full__text p-t-4">
+                            <strong class="route_full__text_detail border_none fs_18_medium">대전시남부터미널</strong>
+                        </div>
+                    </div>
+                    <div class="p-16">
+                        <div>
+                            <button type="button" class="btn_default large bg_primary w-100 gap_6">
+                                <img class="w24" src="../assets/images/bus_fill_fff_16.svg" alt="버스" />
+                                탑승요청
+                            </button>
+                        </div>
+                        <div class="m-t-20">
+                            <button type="button" class="btn_default large bg_error w-100">
+                                탑승 요청 취소
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>  
+        <footer class="footer_copyright m-t-20">
+            (35242) 대전광역시 서구 둔산로 100 (둔산동)<br/>
+            ⓒ DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.
+        </footer>
+    </div>   
+    <nav class="side_menu" aria-expanded="false">
+        <ul class="side_menu_list" id="rightSideMenu" role="menu" aria-labelledby="menubutton">
+            <li role="presentation">
+                <a class="side_menu_anchor" role="menuitem" href="./bookmark.html">
+                    즐겨찾기
+                    
+                </a>
+            </li>
+            <li role="presentation">
+                <a class="side_menu_anchor" role="menuitem" href="./boarding_request.html">
+                    탑승요청내역
+                    
+                </a>
+            </li>
+            <li role="presentation" class="top_white">
+                <a class="side_menu_anchor" role="menuitem" href="./terms.html">
+                    약관 및 정책
+                    
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/overlayscrollbars.browser.es6.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){   
+            // 오버레이 스크롤
+            osDefault('.overlayscroll')  
+        })
+    </script>
+</body>
+
+</html>

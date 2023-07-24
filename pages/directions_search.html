@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Daejeon" />
+    <meta name="author" content="Daejeon" />
+    <meta name="description" content="Daejeon" />
+    <title>대전광역시 교통약자 탑승요청 서비스</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+</head>
+
+<body>
+    <div id="menu_skip">
+        <a href="#rightMenu" tabindex="1"><span>오른쪽 메뉴로 바로가기</span></a>
+        <a href="#route" tabindex="2"><span>길찾기 검색으로 바로가기</span></a>
+        <a href="#content" tabindex="3"><span>본문으로 바로가기</span></a>
+    </div>
+    <div class="row_box">
+        <header class="dflx_ac gap_10" id="header">
+            <a href="main.html" class="w100">
+                <img src="../assets/images/daejeon_logo_36.svg" alt="대전광역시 daejeon metropolitan city" />
+            </a>
+            <h1 class="heading_one">교통약자 저상버스 예약</h1>
+            <button id="rightMenu" type="button" class="m-l-a" aria-haspopup="true" aria-controls="rightSideMenu" title="상단메뉴 열기">
+                <img src="../assets/images/setting_fill_bk_24.svg" alt="" />
+            </button>
+        </header>
+        <article class="route_search" id="route">
+            <div class="search_area">
+                <div class="dflx_ac">
+                    <button type="button" class="search_replace m-r-16" title="출발지 도착지 교체하기">
+                        <img src="../assets/images/array_white_44.svg" alt="" />
+                    </button>
+                    <div class="flex1">
+                        <div class="search_item">
+                            <div>
+                                <label for="startingPoint" class="destination_label" hidden>출발지</label>
+                            </div>
+                            <div class="dflx_ac">
+                                <div class="relative w-85">
+                                    <input type="search" role="combobox" id="startingPoint" aria-controls="startingPoint_id" class="destination_input"  aria-autocomplete="list" aria-activedescentant="" placeholder="" value="대전오월드" title="출발지 검색" />
+                                </div>
+                                <button type="button" class="m-l-a" title="경로 즐겨찾기">
+                                    <img src="../assets/images/route_setting.svg" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search_item relative">
+                            <div>
+                                <label for="destination" class="destination_label" hidden>도착지</label>
+                            </div>
+                            <div class="dflx_ac">
+                                <div class="relative w-85">
+                                    <input type="search" role="combobox" id="destination" aria-controls="destination_id" class="destination_input border_none"  aria-autocomplete="list" aria-activedescentant="" placeholder="" value="유성온천역 대전1호선" title="도착지 검색" />
+                                </div>                           
+                                <button type="button" class="m-l-a" title="경로 검색하기 시작">
+                                    <img src="../assets/images/search_fff_44.svg" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="message_sticky search">
+            <div class="message_box gap_8 h64 btm_black10">
+                <img src="../assets/images/notice_fill_gray_16.svg" alt="" />
+                <p class="fs_medium lh_20">만차 시 탑승하기 어려울 수 있음을<br/>
+                    양해하여 주시기 바랍니다.</p>
+                <button type="button" class="m-l-a" title="안내 메시지 닫기">
+                    <img src="../assets/images/close_line_bk_20.svg" alt="" />
+                </button>            
+            </div>
+            <div class="message_box gap_8">
+                <p class="fc_black60">현재</p>
+                <p class="fs_medium">오전 09:40</p>
+                <div class="m-l-a">
+                    <label for="directionsSorting" hidden>정렬</label>
+                    <select class="fc_black60 custom_selectbox" name="search_sorting_selectbox" id="directionsSorting">
+                        <option value="search_option01">
+                            최소도보순
+                        </option>
+                        <option value="search_option02">
+                            최소거리순
+                        </option>
+                        <option value="search_option03">
+                            최소시간순
+                        </option>
+                    </select>
+                </div>                
+            </div>
+        </article>
+        <main class="" id="content">            
+            <ul class="directions_request_box">
+                <li class="directions_request_list">
+                    <div class="dflx_ae route_info_text">
+                        <p class="fs_24_bold">38분</p>
+                        <p class="fs_medium m-l-8">소요예정</p>
+                        <div class="dflx_ac fs_medium fc_black60 m-l-a">
+                            <span class="h18"><img src="../assets/images/wheelchair_bk_16.svg" alt="휠체어" /></span>
+                            <span>도보 6분</span>
+                            <span class="dashbar_divider bg_black60"></span>
+                            <span class="h18"><img src="../assets/images/bus_fill_bk_16.svg" alt="버스" /></span>
+                            <span>115</span>
+                        </div>
+                    </div>
+                    <div class="route_info_line m-t-15">
+                        <div class="route_list route_first route_gray">
+                            <div class="label_circle small label_grayc2">
+                                <img src="../assets/images/wheelchair_white_16.svg" alt="휠체어" />
+                            </div>
+                        </div>
+                        <div class="route_list route_second route_primary m-l-60 w-70">                            
+                            <div class="label_circle small label_primary">
+                                <img src="../assets/images/bus_fill_fff_16.svg" alt="버스" />
+                            </div>
+                            <p class="route_taken_time fc_white">59분</p>
+                        </div>
+                    </div>
+                    <div class="route_info_onoff m-t-14" role="list">
+                        <div class="route_onoff_list" role="listitem">
+                            <div class="label_circle medium label_onoff">
+                                승차
+                            </div>
+                            <div class="route_onoff_text">
+                                <div class="dflx_ac p-t-10">
+                                    <img src="../assets/images/bus_fill_primary_16.svg" alt="버스" />
+                                    <p class="m-l-4 fs_bold fc_primary lh_transform">115</p>
+                                    <span class="dashbar_divider bg_black16"></span>
+                                    <p class="fs_14_medium fc_black87">대전오월드</p>
+                                    <p class="m-l-4 fs_14_medium fc_black40">22650</p>
+                                </div>
+                                <div class="dflx_ac m-t-4">
+                                    <p class="fs_14_medium fc_error ">1분 후 도착예정</p>
+                                    <p class="btn_roundary small m-l-a">9776 저상</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="route_onoff_list" role="listitem">
+                            <div class="label_circle medium label_onoff">
+                                하차
+                            </div>
+                            <div class="route_onoff_text">
+                                <div class="dflx_ac p-t-10">
+                                    <p class="fs_14_medium fc_black87">유성온천역7번출구</p>
+                                    <p class="m-l-4 fs_14_medium fc_black40">41330</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="directions_route.html" class="btn_default large bg_primary w-100 gap_6 m-t-20">
+                        <img class="w24" src="../assets/images/bus_fill_fff_16.svg" alt="버스" />
+                        탑승요청
+                    </a>
+                </li>
+                <li class="directions_request_list">
+                    <div class="dflx_ae route_info_text">
+                        <p class="fs_24_bold">53분</p>
+                        <p class="fs_medium m-l-8">소요예정</p>
+                        <div class="dflx_ac fs_medium fc_black60 m-l-a">
+                            <span class="h18"><img src="../assets/images/wheelchair_bk_16.svg" alt="휠체어" /></span>
+                            <span>도보 20분</span>
+                            <span class="dashbar_divider bg_black60"></span>
+                            <span class="h18"><img src="../assets/images/bus_fill_bk_16.svg" alt="버스" /></span>
+                            <span>115</span>
+                        </div>
+                    </div>
+                    <div class="route_info_line m-t-15">
+                        <div class="route_list route_first route_gray">
+                            <div class="label_circle small label_grayc2">
+                                <img src="../assets/images/wheelchair_white_16.svg" alt="휠체어" />
+                            </div>
+                        </div>
+                        <div class="route_list route_second route_primary m-l-60 w-50">                            
+                            <div class="label_circle small label_primary">
+                                <img src="../assets/images/bus_fill_fff_16.svg" alt="버스" />
+                            </div>
+                            <p class="route_taken_time fc_white">33분</p>
+                        </div>
+                    </div>
+                    <div class="route_info_onoff m-t-14" role="list">
+                        <div class="route_onoff_list" role="listitem">
+                            <div class="label_circle medium label_onoff">
+                                승차
+                            </div>
+                            <div class="route_onoff_text">
+                                <div class="dflx_ac p-t-10">
+                                    <img src="../assets/images/bus_fill_primary_16.svg" alt="" />
+                                    <p class="m-l-4 fs_bold fc_primary lh_transform">115</p>
+                                    <span class="dashbar_divider bg_black16"></span>
+                                    <p class="fs_14_medium fc_black87">대전오월드</p>
+                                    <p class="m-l-4 fs_14_medium fc_black40">22650</p>
+                                </div>
+                                <div class="dflx_ac m-t-4">
+                                    <p class="fs_14_medium fc_black40">차고지대기중</p>
+                                    <p class="btn_roundary small m-l-a">9776 저상</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="route_onoff_list" role="listitem">
+                            <div class="label_circle medium label_onoff">
+                                하차
+                            </div>
+                            <div class="route_onoff_text">
+                                <div class="dflx_ac p-t-10">
+                                    <p class="fs_14_medium fc_black87">유성온천역7번출구</p>
+                                    <p class="m-l-4 fs_14_medium fc_black40">41330</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="directions_route.html" class="btn_default large bg_primary w-100 gap_6 m-t-20">
+                        <img class="w24" src="../assets/images/bus_fill_fff_16.svg" alt="버스" />
+                        탑승요청
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer class="footer_copyright">
+            (35242) 대전광역시 서구 둔산로 100 (둔산동)<br/>
+            ⓒ DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+    <nav class="side_menu" aria-expanded="false">
+        <ul class="side_menu_list" id="rightSideMenu" role="menu" aria-labelledby="menubutton">
+            <li role="presentation">
+                <a class="side_menu_anchor" role="menuitem" href="./bookmark.html">
+                    즐겨찾기
+                    
+                </a>
+            </li>
+            <li role="presentation">
+                <a class="side_menu_anchor" role="menuitem" href="./boarding_request.html">
+                    탑승요청내역
+                    
+                </a>
+            </li>
+            <li role="presentation" class="top_white">
+                <a class="side_menu_anchor" role="menuitem" href="./terms.html">
+                    약관 및 정책
+                    
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <aside class="refresh_page">
+        <button type="button" class="btn_refresh btn_float_func" title="페이지 새로고침">
+            <img src="../assets/images/reset_secondary_32.svg" alt="" />
+        </button>
+    </aside>
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/overlayscrollbars.browser.es6.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){        
+        })
+    </script>
+</body>
+
+</html>
